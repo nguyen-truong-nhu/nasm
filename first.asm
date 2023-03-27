@@ -1,0 +1,1 @@
+SYS_EXIT equ 1a db 17b db 9c db 0d dw 4096hello db ‘Hello world’,10len equ $-hellosection .textglobal _start_start:mov al, [a]add al, [b]mov [c], almov eax, 4mov ebx, 1mov ecx, hellomov edx, lenint 0x80last:mov eax, SYS_EXITint 0x80
